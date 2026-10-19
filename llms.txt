@@ -1,0 +1,19 @@
+# mcp-log-analyzer
+
+> Free, zero-dependency Python CLI that analyzes MCP (Model Context Protocol) JSON-RPC session logs and reports hung requests, tool errors, agent loops, slow calls, context bloat and leaked secrets. For developers debugging MCP servers and Claude Code / AI agent setups.
+
+## Key files
+- README.md: overview, quickstart, FAQ
+- mla.py: entry point (analyze, redact, demo, sample)
+- mla_core.py: parsing and analysis engine
+- mla_report.py: text, markdown, json reports
+- example_mcp_session.jsonl / example_report.md: synthetic sample data and its report
+- COMPLIANCE.md: authorized-use policy
+
+## Quickstart
+python mla.py demo
+python mla.py analyze example_mcp_session.jsonl --format markdown
+python -m unittest
+
+## License
+MIT
